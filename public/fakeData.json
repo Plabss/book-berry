@@ -1,0 +1,74 @@
+[
+    {
+        "id": "1",
+        "name": "পাইথন দিয়ে প্রোগ্রামিং শেখা",
+        "price": 215,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/dfb303496d64_143309.jpg"
+    },
+    {
+        "id": "2",
+        "name": "কম্পিউটার প্রোগ্রামিং ৩য় খণ্ড : ডেটা স্ট্রাকচার ও অ্যালগরিদম পরিচিতি",
+        "price": 280,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/c91ce3dc9_157644.jpg"
+    },
+    {
+        "id": "3",
+        "name": "পিএইচপি ফ্রেমওয়ার্ক",
+        "price": 257,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/871c7cb56_101724.jpg"
+    },
+    {
+        "id": "4",
+        "name": "আউটসোর্সিং",
+        "price": 300,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/f4052f9e6_104330.jpg"
+    },
+    {
+        "id": "5",
+        "name": "মাস্টারিং ওয়েব ডেভলপমেন্ট ১ম খণ্ড",
+        "price": 360,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/87a7cc023_47577.jpg"
+    },
+    {
+        "id": "6",
+        "name": "পাইথন দিয়ে প্রোগ্রামিং শেখা - ৪র্থ খণ্ড",
+        "price": 275,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/Python_Diye_Programming_Shekha_4th_Part-Tamim_Shahriar_Subeen-b1b52-224822.jpg"
+    },
+    {
+        "id": "7",
+        "name": "কম্পিউটার প্রোগ্রামিং-দ্বিতীয় খণ্ড",
+        "price": 292,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/0a7334a0a_119934.jpg"
+    },
+    {
+        "id": "8",
+        "name": "কম্পিউটার প্রোগ্রামিং-প্রথম খণ্ড",
+        "price": 301,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/003aa4162_166987.jpg"
+    },
+    {
+        "id": "9",
+        "name": "হাবলুদের জন্য প্রোগ্রামিং",
+        "price": 230,
+        "stock": 20,
+        "ratings": 4,
+        "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/260X372/00ea58560_112222.jpg"
+    }
+]
