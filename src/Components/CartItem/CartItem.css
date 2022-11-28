@@ -1,0 +1,13 @@
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px 10px 100px;
+    border: 2px solid gray;
+}
+
+.cartItem img {
+    height: 80px;
+    width: 60px;
+    border-radius: 200px;
+}

@@ -1,0 +1,9 @@
+.shop {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
