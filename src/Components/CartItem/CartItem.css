@@ -1,9 +1,10 @@
 .cartItem {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 10px 100px 10px 100px;
-    border: 2px solid gray;
+
 }
 
 .cartItem img {

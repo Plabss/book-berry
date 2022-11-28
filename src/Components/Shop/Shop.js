@@ -8,8 +8,31 @@ const Shop = () => {
     const [selectedBooks, setSelectedBooks] = useState([]);
 
     const selectBtn = (book) => {
-        const books = [...selectedBooks, book];
-        setSelectedBooks(books);
+        if (selectedBooks.length === 4) {
+            console.log("Four Books are already selected")
+        }
+        else if (!selectedBooks.includes(book)) {
+            const books = [...selectedBooks, book];
+            setSelectedBooks(books);
+        }
+        else {
+            console.log("Already Exist")
+        }
+    }
+
+    const deleteBtn = (id) => {
+        const remain = selectedBooks.filter(book => book.id !== id)
+        setSelectedBooks(remain)
+    }
+
+    const eraseAllBtn = () => {
+        setSelectedBooks([])
+    }
+
+    const ran = []
+    const pickOneBtn = () => {
+        const randomIndx = Math.floor(Math.random() * selectedBooks.length);
+        ran.push(selectedBooks[randomIndx])
     }
 
     useEffect(() => {
@@ -19,29 +42,30 @@ const Shop = () => {
     }, [])
 
     return (
-        <div>
-            <h1>Shop Component</h1>
-            <div className='shop'>
-                <div>
-                    <h1>Books list</h1>
-                    <div className='books-container'>
-                        {
-                            books.map(book => <Book
-                                book={book}
-                                key={book.id}
-                                selectBtn={selectBtn}
-                            ></Book>)
-                        }
-                    </div>
+        <div className='shop'>
+            <div className='left'>
+                <div className='books-container'>
+                    {
+                        books.map(book => <Book
+                            book={book}
+                            key={book.id}
+                            selectBtn={selectBtn}
+                        ></Book>)
+                    }
                 </div>
-                <div>
-                    <h1>Cart</h1>
+            </div>
+            <div className='right'>
+                <div className='cart'>
                     {
                         selectedBooks.map(book => <CartItem
                             key={book.id}
                             book={book}
+                            deleteBtn={deleteBtn}
                         ></CartItem>)
                     }
+                    <button onClick={pickOneBtn}>Pick One for me!</button>
+                    <br />
+                    <button onClick={eraseAllBtn}>Erase All</button>
                 </div>
             </div>
         </div>

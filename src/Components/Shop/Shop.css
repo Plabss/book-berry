@@ -7,3 +7,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.cart {
+    border: 3px solid gray;
+}
+
+.right {
+    margin: 20px;
+}
+
+.left {
+    margin: 20px;
+}
