@@ -1,0 +1,33 @@
+.warning {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    z-index: 10;
+    background-color: whitesmoke;
+    opacity: 0.8;
+    border-radius: 40px;
+    box-shadow: 10px 10px 8px #888888;
+}
+
+.btn {
+    margin-left: 35px;
+    padding: 0;
+    background-color: red;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 40px;
+}
+
+.btn:hover {
+    background-color: orange;
+}

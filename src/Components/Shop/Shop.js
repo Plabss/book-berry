@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Book from '../Book/Book';
 import CartItem from '../CartItem/CartItem';
+import Popup from '../Popup/Popup';
+import Warning from '../Warning/Warning';
 import './Shop.css'
 
 const Shop = () => {
     const [books, setBooks] = useState([]);
     const [selectedBooks, setSelectedBooks] = useState([]);
+    const [randomBook, setRandomBook] = useState({});
+    const [warning, setWarning] = useState("");
 
     const selectBtn = (book) => {
         if (selectedBooks.length === 4) {
-            console.log("Four Books are already selected")
+            setWarning("Four Books are already selected")
         }
         else if (!selectedBooks.includes(book)) {
             const books = [...selectedBooks, book];
             setSelectedBooks(books);
         }
         else {
-            console.log("Already Exist")
+            setWarning("Already Exist")
         }
     }
 
@@ -26,13 +30,18 @@ const Shop = () => {
     }
 
     const eraseAllBtn = () => {
-        setSelectedBooks([])
+        setSelectedBooks([]);
+        setRandomBook({});
     }
 
-    const ran = []
     const pickOneBtn = () => {
-        const randomIndx = Math.floor(Math.random() * selectedBooks.length);
-        ran.push(selectedBooks[randomIndx])
+        if (selectedBooks.length === 4) {
+            const randomIndx = Math.floor(Math.random() * selectedBooks.length);
+            setRandomBook(selectedBooks[randomIndx])
+        }
+        else {
+            setWarning("You have to select 4 Books")
+        }
     }
 
     useEffect(() => {
@@ -40,6 +49,14 @@ const Shop = () => {
             .then(res => res.json())
             .then(data => setBooks(data));
     }, [])
+
+    const cancelHandler = () => {
+        setRandomBook({})
+    }
+
+    const cancelHandlerWarning = () => {
+        setWarning("")
+    }
 
     return (
         <div className='shop'>
@@ -67,6 +84,12 @@ const Shop = () => {
                     <br />
                     <button onClick={eraseAllBtn}>Erase All</button>
                 </div>
+                {randomBook.id &&
+                    <Popup randomBook={randomBook} cancelHandler={cancelHandler} />
+                }
+                {warning.length > 0 &&
+                    <Warning msg={warning} cancelHandlerWarning={cancelHandlerWarning}></Warning>
+                }
             </div>
         </div>
     );
