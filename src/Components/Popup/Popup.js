@@ -2,13 +2,18 @@ import React from 'react'
 import './Popup.css'
 
 const Popup = (props) => {
-    const { name, price } = props.randomBook
+    const { name, price, img, stock } = props.randomBook
     const cancelHandler = props.cancelHandler
     return (
         <div className='popup'>
-            <h1>{name}</h1>
-            <p>{price}</p>
-            <button onClick={() => cancelHandler()}>Cancel</button>
+            <div className='bookDetails'>
+                <img src={img} alt="" />
+                <h3>{name}</h3>
+                <h4>Price : {price}</h4>
+                <p>Stock : {stock}</p>
+            </div>
+            <button className='btnBuy'>Buy Now!</button>
+            <button onClick={() => cancelHandler()} className="btn">Cancel</button>
         </div>
     )
 }

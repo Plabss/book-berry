@@ -20,7 +20,7 @@ const Shop = () => {
             setSelectedBooks(books);
         }
         else {
-            setWarning("Already Exist")
+            setWarning("This Book is Already Selected")
         }
     }
 
@@ -80,9 +80,9 @@ const Shop = () => {
                             deleteBtn={deleteBtn}
                         ></CartItem>)
                     }
-                    <button onClick={pickOneBtn}>Pick One for me!</button>
+                    <button onClick={pickOneBtn} className="pickUpBtn">Pick One for me!</button>
                     <br />
-                    <button onClick={eraseAllBtn}>Erase All</button>
+                    <button onClick={eraseAllBtn} className="eraseAllBtn">Erase All</button>
                 </div>
                 {randomBook.id &&
                     <Popup randomBook={randomBook} cancelHandler={cancelHandler} />
