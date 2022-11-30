@@ -30,3 +30,7 @@
 .select-btn:hover {
     background-color: orange;
 }
+
+.icon {
+    margin-left: 10px;
+}

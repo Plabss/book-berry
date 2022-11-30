@@ -1,9 +1,25 @@
 .header {
-    background-color: aqua;
-    height: 100px;
+    height: 80px;
+    background-color: #1C2B35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 140px;
 }
 
-.header h1 {
-    margin: 0;
-    padding: 25px;
+.header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 32px;
+}
+
+.header a:hover {
+    color: orange;
+}
+
+.header img {
+    height: 50px;
+    width: 150px;
 }

@@ -4,6 +4,7 @@ import CartItem from '../CartItem/CartItem';
 import Popup from '../Popup/Popup';
 import Warning from '../Warning/Warning';
 import './Shop.css'
+import gif from '../../GIF/UKzC.gif'
 
 const Shop = () => {
     const [books, setBooks] = useState([]);
@@ -72,24 +73,35 @@ const Shop = () => {
                 </div>
             </div>
             <div className='right'>
-                <div className='cart'>
-                    {
-                        selectedBooks.map(book => <CartItem
-                            key={book.id}
-                            book={book}
-                            deleteBtn={deleteBtn}
-                        ></CartItem>)
-                    }
-                    <button onClick={pickOneBtn} className="pickUpBtn">Pick One for me!</button>
-                    <br />
-                    <button onClick={eraseAllBtn} className="eraseAllBtn">Erase All</button>
-                </div>
-                {randomBook.id &&
-                    <Popup randomBook={randomBook} cancelHandler={cancelHandler} />
+                {selectedBooks.length > 0 &&
+                    <div>
+                        <div className='cart'>
+                            {
+                                selectedBooks.map(book => <CartItem
+                                    key={book.id}
+                                    book={book}
+                                    deleteBtn={deleteBtn}
+                                ></CartItem>)
+                            }
+                            <button onClick={pickOneBtn} className="pickUpBtn">Pick One for me!</button>
+                            <br />
+                            <button onClick={eraseAllBtn} className="eraseAllBtn">Erase All</button>
+                        </div>
+                        {randomBook.id &&
+                            <Popup randomBook={randomBook} cancelHandler={cancelHandler} />
+                        }
+                        {warning.length > 0 &&
+                            <Warning msg={warning} cancelHandlerWarning={cancelHandlerWarning}></Warning>
+                        }
+                    </div>
                 }
-                {warning.length > 0 &&
-                    <Warning msg={warning} cancelHandlerWarning={cancelHandlerWarning}></Warning>
+                {!selectedBooks.length &&
+                    <div>
+                        <img src={gif} alt="" />
+                        <h1>“The more that you read, the more things you will know. The more that you learn, the more places you’ll go.”</h1>
+                    </div>
                 }
+
             </div>
         </div>
     );

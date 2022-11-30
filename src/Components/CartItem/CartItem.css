@@ -12,3 +12,9 @@
     width: 60px;
     border-radius: 200px;
 }
+
+.deleteBtn {
+    color: rgba(136, 14, 14, 0.891);
+    height: 20px;
+    width: 20px;
+}
